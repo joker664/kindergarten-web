@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>web.root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/conf/spring/applicationContext.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>/WEB-INF/conf/log4j/log4j.properties</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--<filter>-->
+        <!--<filter-name>struts-prepare</filter-name>-->
+        <!--<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>-->
+    <!--</filter>-->
+    <filter>
+        <filter-name>struts</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+        <init-param>
+            <!-- param-name must be "config" -->
+            <param-name>config</param-name>
+            <!-- 修改了配置文件默认路径，则必须加入struts-default.xml,不管自定义文件是否extends了struts-default -->
+            <!-- 自定义struts文件不继承struts-default则应用无法启动 -->
+            <param-value>struts-default.xml,../conf/struts/struts.xml</param-value>
+        </init-param>
+    </filter>
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts-prepare</filter-name>-->
+        <!--<url-pattern>*.action</url-pattern>-->
+    <!--</filter-mapping>-->
+    <filter-mapping>
+        <filter-name>struts</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+</web-app>

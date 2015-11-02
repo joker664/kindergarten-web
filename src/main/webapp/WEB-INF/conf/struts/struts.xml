@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    <package name="default" extends="struts-default">
+        <action name="test" class="testAction" method="test">
+            <result name="success">/pages/test.jsp</result>
+        </action>
+        <action name="testInput" class="testAction" method="testInput">
+            <result name="success">/index.jsp</result>
+        </action>
+        <!--<action name="testObject" class="com.hxd.action.TestAction" method="testObject">
+            <result type="json">
+                <param name="jsonObject">testObject</param>
+            </result>
+        </action>-->
+    </package>
+</struts>
