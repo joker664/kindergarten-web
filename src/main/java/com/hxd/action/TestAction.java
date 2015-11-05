@@ -1,48 +1,28 @@
 package com.hxd.action;
 
-import com.hxd.domain.TestObject;
+import com.hxd.form.TestForm;
 import com.hxd.service.TestService;
-import com.opensymphony.xwork2.ActionSupport;
 
 import javax.annotation.Resource;
 
 /**
- * Created by Joker on 2015/10/31.
+ * Created by Joker on 2015/11/4.
  */
-public class TestAction extends ActionSupport {
+public class TestAction extends BaseAction {
     @Resource
     private TestService testService;
+    private TestForm testForm;
 
-    private TestObject testObject;
-    public String test() {
-        testService.service("hxd");
-        return SUCCESS;
-    }
-    public String testInput() {
+    public String testJson() {
+        setTestForm(testService.service("hxd"));
         return SUCCESS;
     }
 
-    public String testObject() {
-        TestObject object = new TestObject();
-        object.setName("黄旭冬");
-        object.setAge(23);
-        this.setTestObject(object);
-        return SUCCESS;
+    public void setTestForm(TestForm testForm) {
+        this.testForm = testForm;
     }
 
-    public TestObject getTestObject() {
-        return testObject;
-    }
-
-    public void setTestObject(TestObject testObject) {
-        this.testObject = testObject;
-    }
-
-    public TestService getTestService() {
-        return testService;
-    }
-
-    public void setTestService(TestService testService) {
-        this.testService = testService;
+    public TestForm getTestForm() {
+        return testForm;
     }
 }

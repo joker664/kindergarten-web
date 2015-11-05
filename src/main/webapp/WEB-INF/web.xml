@@ -3,9 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
     <context-param>
         <param-name>webAppRootKey</param-name>
-        <param-value>web.root</param-value>
+        <param-value>xinmiao.root</param-value>
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -23,9 +24,25 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <!--<filter>
+        <filter-name>urlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>-->
     <!--<filter>-->
-        <!--<filter-name>struts-prepare</filter-name>-->
-        <!--<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>-->
+    <!--<filter-name>struts-prepare</filter-name>-->
+    <!--<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>-->
     <!--</filter>-->
     <filter>
         <filter-name>struts</filter-name>
@@ -35,15 +52,35 @@
             <param-name>config</param-name>
             <!-- 修改了配置文件默认路径，则必须加入struts-default.xml,不管自定义文件是否extends了struts-default -->
             <!-- 自定义struts文件不继承struts-default则应用无法启动 -->
-            <param-value>struts-default.xml,../conf/struts/struts.xml</param-value>
+            <param-value>struts-default.xml,struts-plugin.xml,../conf/struts/struts.xml</param-value>
         </init-param>
     </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--<filter-mapping>
+        <filter-name>urlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>-->
     <!--<filter-mapping>-->
-        <!--<filter-name>struts-prepare</filter-name>-->
-        <!--<url-pattern>*.action</url-pattern>-->
+    <!--<filter-name>struts-prepare</filter-name>-->
+    <!--<url-pattern>*.action</url-pattern>-->
     <!--</filter-mapping>-->
     <filter-mapping>
         <filter-name>struts</filter-name>
         <url-pattern>*.action</url-pattern>
     </filter-mapping>
+
+    <servlet>
+        <servlet-name>CXFService</servlet-name>
+        <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CXFService</servlet-name>
+        <url-pattern>/CXFService/*</url-pattern>
+    </servlet-mapping>
 </web-app>
