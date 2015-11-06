@@ -9,11 +9,11 @@
         http://www.springframework.org/schema/context/spring-context-3.0.xsd
         http://cxf.apache.org/jaxrs
         http://cxf.apache.org/schemas/jaxrs.xsd">
-    <!--<import resource="classpath:META-INF/cxf/cxf.xml"/>
-    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
-    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>-->
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <!--<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>-->
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
     <context:annotation-config/>
-    <jaxrs:server id="restServiceContainer" address="/rest">
+    <jaxrs:server id="restServiceContainer" address="/">
         <jaxrs:serviceBeans>
             <ref bean="testService" />
         </jaxrs:serviceBeans>
@@ -24,6 +24,9 @@
         <jaxrs:languageMappings>
             <entry key="en" value="en-gb"/>
         </jaxrs:languageMappings>
+        <jaxrs:providers>
+            <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+        </jaxrs:providers>
     </jaxrs:server>
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">

@@ -14,7 +14,7 @@ public class TestAction extends BaseAction {
     private TestForm testForm;
 
     public String testJson() {
-        setTestForm(testService.service("hxd"));
+        setTestForm(testService.service("huangxudong"));
         return SUCCESS;
     }
 

@@ -74,6 +74,16 @@
             <artifactId>cxf-rt-frontend-jaxrs</artifactId>
             <version>3.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-jaxrs</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-bindings-soap</artifactId>
+            <version>3.1.4</version>
+        </dependency>-->
         <!-- struts2-json-plugin -->
         <dependency>
             <groupId>org.apache.struts</groupId>
