@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" xml:lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -522,5 +522,15 @@ left:40px;"><A title=更多平台 class="bshare-more bshare-more-icon more-style
             $("#focus img.bg").css("margin-left", ($(this).parent().width() - $(this).width()) * 0.5);
         });
         $("#body").stop().animate({marginTop: $("#focus").height() + 124}, 0);
+    });
+</script>
+<script>
+    $(function(){
+        $.ajax({
+            url:"/CXFService/test/hxd",
+            data:"name=huangxudong",
+            success:function(msg){
+            }
+        });
     });
 </script>

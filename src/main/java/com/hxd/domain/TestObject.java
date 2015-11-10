@@ -1,9 +1,11 @@
 package com.hxd.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Joker on 2015/10/31.
  */
-public class TestObject {
+public class TestObject implements Serializable {
     private String id;
     private String name;
 

@@ -3,7 +3,6 @@ package com.hxd.service;
 import com.google.common.collect.Lists;
 import com.hxd.dao.TestDao;
 import com.hxd.domain.TestObject;
-import com.hxd.form.TestForm;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -24,10 +23,9 @@ public class TestService {
     private TestDao testDao;
     @GET
     @Path("/hxd")
-    public TestForm service(@QueryParam("name")String name) {
+    public TestObject service(@QueryParam("name")String name) {
         TestObject object = testDao.queryForObjectByName(name);
-        TestForm testForm = TestForm.fromDomain(object);
-        return testForm;
+        return object;
     }
     @GET
     @Path("/sth")
