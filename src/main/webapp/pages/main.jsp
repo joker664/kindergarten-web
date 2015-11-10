@@ -1,0 +1,60 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Test</title>
+    <script src="../js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+    <div class="announcement">公告栏</div>
+    <div class="introduce">园所介绍</div>
+    <div>
+        sdfds
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+        sdfds<br>
+    </div>
+</body>
+</html>

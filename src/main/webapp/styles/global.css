@@ -1,126 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
-/*
-color:red !important;/* Firefox、IE7支持 
-_color:red;  IE6支持 
-*color:red;  IE6、IE7支持 
-*+color:red; IE7支持/
-color:red\9; IE6、IE7、IE8支持 
-color:red\0; IE8支持
-@media screen and(-webkit-min-device-pixel-ratio:0){} chrome
-filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#99000000', EndColorStr='#99000000');
-_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/templets/ftwcm/image/bg_index.body1.png');_background:none;
-_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight*0.3));}
-behavior:url('');
-*/
+body {
+    -webkit-text-size-adjust: none;
+    font-size: 14px;
+    color: #909090;
+    line-height: 180%;
+    font-family: '微软雅黑';
+}
 
+ol, ul, li {
+    list-style: none;
+}
 
-/*--标签--*/
-*{}
-html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {margin: 0;padding: 0;}
-html{_background-image:url(about:blank);_background-attachment:fixed;}
-body{-webkit-text-size-adjust:none;font-size:14px;color:#909090;line-height:180%;font-family:'微软雅黑';}
-ol,ul,li{list-style:none outside none;}
-a{text-decoration:none;color:#999;}
-a:hover{color:#666;}
-a img{border:0 none;}
-table,tr,td,th{border-collapse:collapse;padding:0; margin:0;}
-img{vertical-align: middle;}
-h1{font-size:18px;}
-h2{font-size:16px;}
-h3{font-size:14px;}
-h4{font-size:12px;}
-input,textarea{padding:0 2px;border:none; resize:none;}
-
-/*--类--*/
-.block{width:935px;margin:0 auto;}
-.clear{clear:both;height:0;overflow:hidden;}
-.clear10{height:10px;overflow:hidden;clear:both;}
-.left{float:left;}
-.right{float:right;}
-.mt10{margin-top:10px;}
-.mr10{margin-right:10px;}
-.mb10{margin-bottom:10px;}
-.ml10{margin-left:10px;}
-.hide{display:none;}
-.input1{background:url(http://www.etonkids.com/templets/ydyey/image/by/input1.png) left top no-repeat;width:420px;height:29px;line-height:29px;padding:0 10px;}
-
-/*--头部--*/
-#header{ background:url(http://www.etonkids.com/templets/ydyey/image/header_bg.png) left top repeat-x;height:132px;top:0;width:100%;z-index:100; position:relative;}
-#header .block{position:relative;height:124px;z-index:10;width:980px;}
-#header .logo{position:absolute;left:0;top:18px; background:url(http://www.etonkids.com/templets/ydyey/image//logo.png) left top no-repeat;height:51px;width:208px;}
-#header .info{position:absolute;top:30px;right:0;z-index:1000;}
-#header .info .tel{color:#fff;float:left;}
-#header .info .tel a{color:#fff;}
-#header .info .tel span{background:url(http://www.etonkids.com/templets/ydyey/image/index_icon.png) left center no-repeat;height:25px;width:20px;float:left;margin-right:5px;}
-#header .info .weibo{float:left;margin-left:20px;position:relative;z-index:1000; width:60px;margin-top:4px;}
-#header .info .weibo .wx{position:absolute;left:20px;top:25px;border:2px solid #fff;display:none;}
-#header .info .weibo .wx img{width:100px;}
-#header .info .weibo a{float:left;height:20px;width:20px;}
-#header .info .weibo a.a1{background:url(http://www.etonkids.com/templets/ydyey/image/index_icon.png) -20px top no-repeat;}
-#header .info .weibo a.a2{background:url(http://www.etonkids.com/templets/ydyey/image/index_icon.png) -40px top no-repeat;}
-#header .info .weibo a.a3{background:url(http://www.etonkids.com/templets/ydyey/image/index_icon.png) -60px top no-repeat;}
-#header .info .weibo .wb {border: 2px solid #FFFFFF;background:#FFFFFF;display:none;left: -36px;position: absolute;top: 20px;width:62px;height:21px;}
-#header .search{position:absolute;background:url(http://www.etonkids.com/templets/ydyey/image/search_bg.png) left top no-repeat;height:58px;width:181px;right:10px;bottom:-12px;z-index:90;}
-#header .search form{margin:19px 22px 0 30px;}
-#header .search form .input{width:100px; background:none;color:#7c7c7c;font-family:Arial, Helvetica, sans-serif;height:20px;font-size:14px;float:left;line-height:20px;}
-#header .search form .submit{float:right;height:20px;width:22px; background:none; cursor:pointer;}
-#header .logo a{display:block;height:51px;width:208px;}
-.nav_main{position:absolute;height:40px;top:84px;}
-.nav_main li{float:left;}
-.nav_main li a{height:40px;line-height:40px;float:left;text-align:center;color:#fff;padding:0 16px; font-family//:Arial, Helvetica, sans-serif;font-size:16px;}
-.nav_main li a:hover{background:#f77321;color:#fff;}
-.nav_main li.now a,.nav_main li.now a:hover{background:#f77321 url(http://www.etonkids.com/templets/ydyey/image/nav_main_a_now.gif) center bottom no-repeat;color:#fff;}
-.nav_main_child{position:absolute;background:url(http://www.etonkids.com/templets/ydyey/image/nav_main_child.png) left top repeat-x;height:56px;line-height:50px;width:100%;display:none;}
-#header .nav_main_child .block{height:auto;}
-.nav_main_child .child{display:none;position:absolute;height:50px;width:100%;}
-.nav_main_child a{color:#707070;font-size:16px;margin:25px; font-family:微软雅黑;}
-.nav_main_child a:hover{color:#d15609;}
-
-/*--中部--*/
-#body{margin-top:-8px;}
-
-/*--底部--*/
-#footer{background:#515151;color:#b9b9b9;text-transform:uppercase; position:relative;z-index:1;}
-#footer a{color:#b9b9b9;}
-#footer a:hover{color:#c9c9c9;}
-#footer .dl{float:left;width:60%;padding:25px 0;}
-#footer .dr{float:right;width:30%;padding-top:30px;text-align:right;}
-#footer .nav_foot{float:right;margin-bottom:13px;}
-#footer .nav_foot a{border-left:1px solid #b9b9b9;padding:0 6px;text-align:center;height:14px;line-height:14px;float:left;}
-#footer .nav_foot a.first{border:none;}
-#footer .search{background:url(http://www.etonkids.com/templets/ydyey/image/search_footer_bg.png) right top no-repeat;height:23px;clear:both;}
-#footer .search form{width:189px;float:right;height:23px;line-height:23px;}
-#footer .search .input{background:none;width:142px;height:23px;float:left;margin-left:3px;padding:0 7px;line-height:23px;_padding:0 3px;color:#555;}
-#footer .search .submit{width:30px;height:23px; background:none; cursor:pointer;}
-#footer .powerby{margin-top:10px;}
-.footb{position:fixed;_position:absolute;bottom:0;width:100%;}
-
-/*--通用--*/
-.pages{position:relative;}
-.pages ul{position:absolute;left:50%;top:0;}
-
-/*.fastA{background:url(image/fastABg.png) right top no-repeat; width:159px; height:431px; overflow:hidden; position:fixed; z-index:1000; top:150px; right:5px;}
-.fastA .list{padding-top:28px; height:350px; overflow:hidden; position:relative;}
-.fastA li{height:46px; overflow:hidden; position:relative;}
-.fastA li a{display:block; height:40px; line-height:40px; width:61px; margin-left:auto; overflow:hidden; position:relative; cursor:pointer;}
-.fastA li .ico{display:none;}
-.fastA li a span{display:none; font-size:16px; color:#474747; padding-left:62px;}
-.fastA li a img{position:absolute; z-index:1001; left:0px; top:0px;}
-.fastA li a:hover{width:159px; background:url(image/fastABg1.png) left top no-repeat;}
-.fastA li a:hover span{display:inline;}
-.fastA .a1{display:block; background:url(image/fastAIco.png) left top no-repeat; width:64px; height:53px; overflow:hidden; margin-left:auto;}
-.fastA .a2{display:block; background:url(image/fastAIco2.png) left top no-repeat; width:64px; height:53px; overflow:hidden; margin-left:auto;}*/
-
-.fastA{width:61px;height:431px;position:fixed;_position:absolute; z-index:1000; top:150px; right:5px;
-_top:expression(eval(document.documentElement.scrollTop+150));}
-.fastA .list{background:#bad6e1; width:61px;padding-top:28px;height:350px;position:relative;}
-.fastA li{height:46px; position:relative;}
-.fastA li a{display:block; height:46px; line-height:46px; width:61px; margin-left:auto;position:relative; cursor:pointer;}
-.fastA li a .ico{left:-100px;top:0;position:absolute;z-index:2;display:none;}
-.fastA li a span{font-size:16px;color:#474747; padding-left:62px;z-index:1;position:absolute;right:0;top:0;width:100px;height:40px;line-height:40px;background:#bad6e1; display:none;}
-.fastA li a img{position:absolute;left:0px; top:0px;}
-.fastA li a:hover span{display:block;}
-.fastA li a:hover .ico{display:block;}
-.fastA .a1{display:block; background:#BAD6E1 url(http://www.etonkids.com/templets/ydyey/image/fastAIco.png) center center no-repeat; width:61px; height:53px; overflow:hidden; margin-left:auto;margin-top:3px;}
-.fastA .a2{display:block; background:#BAD6E1 url(http://www.etonkids.com/templets/ydyey/image/fastAIco2.png) center center no-repeat; width:61px; height:53px; overflow:hidden; margin-left:auto;margin-top:3px;}
+a {
+    text-decoration: none;
+}
