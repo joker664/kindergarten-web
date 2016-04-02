@@ -1,2 +1,2 @@
 # xinmiao
-web for xin miao kindergarten
+web app for xin miao kindergarten
